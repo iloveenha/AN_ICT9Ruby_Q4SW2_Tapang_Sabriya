@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arithmetic Calculator</title>
+
+    <style>
+    body {
+    background-color: #eb6642;
+    }   
+
+    .button-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 300px; 
+    margin: 0 auto; 
+    }
+
+    .button {
+    background-color: #e8b99d;
+    font-size: 50px;
+    width: 120px;
+    height: 120px; 
+    }
+
+    input[type="number"] {
+    width: 170px; 
+    height: 30px; 
+    font-size: 20px;
+    }
+
+    img {
+    float: left;    
+    margin-right: 25px;
+    }  
+
+    </style>
+
+</head>
+<body>
+
+    <img src="enha ob.jpg" height="700" width="600">
+
+    <h1>1,2, Connect! Hello, we are Enhypen! <br>
+    We are here to help you with the four basic operations. :)</h1>
+    <h2>Given (or taken 😉) :</h2>
+
+    <form> 
+    <h2>
+    <label>Enter value for E:</label> <br>
+    <input type="number" id="numE"> </label> <br> <br>
+    <label>Enter value for N:</label> <br>
+    <input type="number" id="numN"> </label> <br> <br> 
+    </h2>
+
+    <h2> Click the buttons below to proceed. </h2> <br>
+
+    <div class="button-container"> 
+    <button class="button" onclick="addNumbers()" type="button">+</button> 
+    <button class="button" onclick="subtractNumbers()" type="button">-</button>
+    </div> <br> <br>
+
+    <div class="button-container">
+    <button class="button" onclick="multiplyNumbers()" type="button">×</button>
+    <button class="button" onclick="divideNumbers()" type="button">÷</button>
+    </div>
+    </form> 
+
+    <script>
+    function addNumbers() {
+    var E = parseFloat(document.getElementById("numE").value);
+    var N = parseFloat(document.getElementById("numN").value);    
+    var result = E + N; 
+    alert("The sum of E and N is " + result);
+    }
+
+    function subtractNumbers() {
+    var E = parseFloat(document.getElementById("numE").value);
+    var N = parseFloat(document.getElementById("numN").value);    
+    var result = E - N; 
+    alert("The difference of E and N is " + result);
+    }
+
+    function multiplyNumbers() {
+    var E = parseFloat(document.getElementById("numE").value);
+    var N = parseFloat(document.getElementById("numN").value);    
+    var result = E * N; 
+    alert("The product of E and N is " + result);
+    }
+
+    function divideNumbers() {
+    var E = parseFloat(document.getElementById("numE").value);
+    var N = parseFloat(document.getElementById("numN").value);    
+    var result = E / N; 
+    alert("The quotient of E and N is " + result);
+    }
+    </script>
+
+</body>
+</html>
